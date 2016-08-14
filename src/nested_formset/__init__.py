@@ -73,20 +73,23 @@ def nestedformset_factory(parent_model, model, nested_formset,
                           min_num=None, validate_min=None):
     kwargs = {
         'form': form,
-        'formfield_callback': formfield_callback,
         'formset': formset,
-        'extra': extra,
-        'can_delete': can_delete,
-        'can_order': can_order,
+        'fk_name': fk_name,
         'fields': fields,
         'exclude': exclude,
+        'extra': extra,
+        'can_order': can_order,
+        'can_delete': can_delete,
         'max_num': max_num,
-            'widgets': widgets,
-            'validate_max': validate_max,
-            'localized_fields': localized_fields,
-            'labels': labels,
-            'help_texts': help_texts,
-            'error_messages': error_messages,
+        'formfield_callback': formfield_callback,
+        'widgets': widgets,
+        'validate_max': validate_max,
+        'localized_fields': localized_fields,
+        'labels': labels,
+        'help_texts': help_texts,
+        'error_messages': error_messages,
+        'min_num': min_num,
+        'validate_min': validate_min
     }
 
     if kwargs['fields'] is None:
