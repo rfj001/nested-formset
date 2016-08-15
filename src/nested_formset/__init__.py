@@ -98,11 +98,6 @@ def nestedformset_factory(parent_model, model, nested_formset,
             for field in model._meta.local_fields
         ]
 
-    kwargs.update({
-        'min_num': min_num,
-        'validate_min': validate_min,
-    })
-
     NestedFormSet = inlineformset_factory(
         parent_model,
         model,
