@@ -1,5 +1,3 @@
-import django
-
 from django.forms.models import (
     BaseInlineFormSet,
     inlineformset_factory,
